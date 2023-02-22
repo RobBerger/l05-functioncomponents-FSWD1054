@@ -13,7 +13,8 @@ function ContactForm(props) {
 
   function handleSubmit(event) {
     event.preventDefault()
-    props.onNewContact(contact)
+    const prepedMessage = `${contact.name} - ${contact.email} - ${contact.phone}`
+    props.onNewContact(prepedMessage)
   }
 
   return (
